@@ -61,8 +61,8 @@ for i in range(100):
     time.sleep(0.01)
 st.write(df)
 
-calories = pd.read_csv(r"D:\Data analytics\CalorieProject\calories.csv")
-exercise = pd.read_csv(r"D:\Data analytics\CalorieProject\exercise.csv")
+calories = pd.read_csv(r"calories.csv")
+exercise = pd.read_csv(r"exercise.csv")
 
 exercise_df = exercise.merge(calories, on="User_ID")
 exercise_df.drop(columns="User_ID", inplace=True)
